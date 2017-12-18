@@ -1,0 +1,16 @@
+@startuml 3-3.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+
+title マネージャーとニンゲン
+
+class Ningen {
+    -shimei
+    -shincho
+    +taberu()
+    +neru()
+}
+
+Manager -> Ningen
+
+@enduml
