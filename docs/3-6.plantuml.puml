@@ -1,0 +1,23 @@
+@startuml 3-6.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+
+title 社長命令から社員起立までの流れ
+
+actor 社長
+
+activate 社長
+社長 -> 社員: 1: 起立する()
+
+activate 社員
+社員 --> 社長: 2: 起立する() : 表示メッセージ
+deactivate 社員
+
+社長 -> 表示画面: 3: 表示する（表示メッセージ）
+activate 表示画面
+deactivate 表示画面
+
+deactivate 社長
+
+@enduml
