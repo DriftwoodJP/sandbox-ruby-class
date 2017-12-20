@@ -1,5 +1,4 @@
 # Ningen class for lesson 3.3
-
 class Ningen
   def initialize(shimei, shincho)
     @shimei = shimei

@@ -1,7 +1,7 @@
 require_relative '../shain_factory'
 
-describe 'Refactored ShainFactory' do
-  let(:shain_factory) { ShainFactory.new }
+describe ShainFactory do
+  let(:shain_factory) { described_class.new }
 
   example 'Tantoオブジェクトを生成しているかチェックする' do
     expect(shain_factory.create('Tanto', 100)).to be_an_instance_of Tanto
