@@ -1,14 +1,14 @@
-require_relative './salary'
+require_relative './gyoumu'
 
-# Shain class for lesson 3.8
+# Shain class for lesson 4.2
 class Shain
-  include Salary
+  attr_accessor :gyoumu
 
-  def initialize(kihonkyu)
-    @kihonkyu = kihonkyu
+  def initialize
+    @gyoumu = Gyoumu.new
   end
 
-  def standup
-    puts '社員はとりあえず起立する'
+  def work
+    @gyoumu.standup
   end
 end
