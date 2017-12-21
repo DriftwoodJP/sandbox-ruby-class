@@ -1,0 +1,28 @@
+@startuml 4-5-3.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+skinparam classAttributeIconSize 0
+
+title アダプターパターン(継承 is a)
+
+class 社長 {
+}
+
+class 派遣社員 {
+    +起立する()
+}
+
+class 受入社員 {
+    +起立する()
+    -キリツする()
+}
+
+社長 -> 派遣社員
+派遣社員 <|-- 受入社員
+
+note right of 受入社員::起立する
+  キリツする()
+end note
+
+@enduml
