@@ -2,6 +2,7 @@
 skinparam monochrome true
 skinparam defaultFontName Ricty
 hide footbox
+skinparam classAttributeIconSize 0
 
 title ファクトリーメソッドパターン
 
