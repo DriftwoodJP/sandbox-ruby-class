@@ -1,0 +1,31 @@
+@startuml 4-6.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+skinparam classAttributeIconSize 0
+
+title コンポジットパターン
+
+部門 "1\nchild" o-- "0..*\nparent" 組織単位
+
+class 組織単位 {
+    +名称
+    +連絡先
+    +仕事する()
+}
+
+class 社員 {
+    +仕事する()
+}
+
+class 部門 {
+    +仕事する()
+    +所属を追加する()
+    +所属を削除する()
+}
+
+組織単位 <|--- 社員
+組織単位 <|--- 部門
+
+
+@enduml
