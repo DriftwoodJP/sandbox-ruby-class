@@ -1,0 +1,22 @@
+@startuml usecase.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+skinparam shadowing false
+hide footbox
+skinparam classAttributeIconSize 0
+
+title ユースケース
+
+left to right direction
+skinparam packageStyle rectangle
+actor 社員
+actor 経理担当者
+actor 承認者
+rectangle \n交通費精算システム\n {
+  社員 -- (交通費を入力する)
+  (交通費を表示する) -- 経理担当者
+  (交通費を振り込む) -- 経理担当者
+  (交通費生産を承認する) -- 承認者
+}
+
+@enduml

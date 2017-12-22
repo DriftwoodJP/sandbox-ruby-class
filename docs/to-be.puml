@@ -1,0 +1,23 @@
+@startuml to-be.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+skinparam shadowing false
+hide footbox
+skinparam classAttributeIconSize 0
+
+title アクティビティ To-Be model\n
+
+|社員|
+start
+:出張先への経路を入力する;
+|経理担当者|
+:交通費精算を確認する;
+|承諾者|
+:交通費精算を承諾する;
+|経理担当者|
+:交通費清算金を\n申請者の銀行口座に\n振り込む;
+|社員|
+:振込通知を受け取る;
+stop
+
+@enduml

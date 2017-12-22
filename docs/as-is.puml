@@ -1,0 +1,27 @@
+@startuml as-is.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+skinparam shadowing false
+hide footbox
+skinparam classAttributeIconSize 0
+
+title アクティビティ As-Is model\n
+
+|社員|
+start
+:出張地への経路を確認する;
+:交通費の精算書を作成する;
+:経理部に精算書を提出する;
+|経理担当者|
+:精算書を確認する;
+:精算書を承諾者に提出する;
+|承諾者|
+:精算書を承諾する;
+:経理部に戻す;
+|経理担当者|
+:現金を用意して渡す;
+|社員|
+:清算金を受け取る;
+stop
+
+@enduml
