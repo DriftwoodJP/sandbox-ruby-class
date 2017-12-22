@@ -1,28 +1,30 @@
-require_relative './gyoumu'
-require_relative './yakushoku'
-
-# Shain class for lesson 4.3
+# Shain class for lesson 4.8
 class Shain
-  attr_accessor :gyoumu, :yakushoku
-
-  def initialize
-    @gyoumu = Gyoumu.new
-    @yakushoku = Yakushoku.new
+  def initialize(kihonkyu)
+    @kihonkyu = kihonkyu
   end
 
-  def work
-    @gyoumu.standup
+  def print_salary
+    puts "私の給料は#{calc_salary}です。"
   end
 
-  def calculate_salary(kihonkyu)
-    @yakushoku.calculate_salary(kihonkyu)
-  end
+  def calc_salary; end
+end
 
-  def up
-    @yakushoku = @yakushoku.up
+class Tanto < Shain
+  def calc_salary
+    @kihonkyu
   end
+end
 
-  def down
-    @yakushoku = @yakushoku.down
+class Shunin < Shain
+  def calc_salary
+    @kihonkyu * 2 + 1
+  end
+end
+
+class Bucho < Shain
+  def calc_salary
+    @kihonkyu * 3
   end
 end
