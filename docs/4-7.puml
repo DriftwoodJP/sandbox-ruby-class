@@ -1,0 +1,31 @@
+@startuml 4-7.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+skinparam classAttributeIconSize 0
+
+title テンプレートメソッドパターン
+
+class 社員 {
+    -基本給
+    +給料を表示する()
+    -給料を計算する()
+}
+
+class 担当 {
+    -給料を計算する()
+}
+
+class 主任 {
+    -給料を計算する()
+}
+
+class 部長 {
+    -給料を計算する()
+}
+
+社員 <|--- 担当
+社員 <|--- 主任
+社員 <|--- 部長
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml 4-2.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+skinparam classAttributeIconSize 0
+
+title ストラテジーパターン
+
+class 社長 {
+    +起立させる()
+    +意見を聞く()
+}
+
+class 社員 {
+    +働く()
+    +意見を聞く()
+    +主任にする()
+    +担当にする()
+}
+
+class 業務 {
+    +起立する()
+    +意見を聞く()
+}
+
+class 担当 {
+    +起立する()
+    +意見を聞く()
+}
+
+class 主任 {
+    +起立する()
+    +意見を聞く()
+}
+
+社長 -> 社員
+社員 -> 業務
+業務 <|-- 担当
+業務 <|-- 主任
+
+@enduml
