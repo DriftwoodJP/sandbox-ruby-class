@@ -1,0 +1,40 @@
+@startuml 4-4.png
+skinparam monochrome true
+skinparam defaultFontName Ricty
+hide footbox
+skinparam classAttributeIconSize 0
+
+title ファクトリーメソッドパターン
+
+class 社長 {
+}
+
+class 社員ファクトリー {
+    +生成する()
+    +ファクトリーメソッド()
+}
+
+class 社員 {
+    +起立する()
+    +給料を計算する()
+}
+
+class 担当 {
+    +起立する()
+    +給料を計算する()
+}
+
+class 主任 {
+    +起立する()
+    +給料を計算する()
+}
+
+社長 -> 社員ファクトリー
+社長 -> 社員
+社員 <|-- 担当
+社員 <|-- 主任
+社員ファクトリー ..> 社員 : creates
+社員ファクトリー ..> 担当: creates
+社員ファクトリー ..> 主任 : creates
+
+@enduml
